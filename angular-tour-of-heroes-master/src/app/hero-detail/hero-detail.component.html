@@ -1,0 +1,20 @@
+<div *ngIf="hero">
+  <mat-card >
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>ID: </span>{{hero.id}}</div>
+ 
+    <mat-card-content> 
+    <label>Name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  
+  <button class="heroDetailButton" (click)="goBack()">go back</button>
+  <button class="heroDetailButton" (click)="save()">save</button>
+</mat-card-content>
+</mat-card>
+  
+
+
+  
+
+
