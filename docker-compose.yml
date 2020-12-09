@@ -1,0 +1,13 @@
+version: '3'
+
+
+services:
+  frontend: 
+    build:  ./angular-tour-of-heroes-master
+    ports:
+     - "8000:80"
+
+  backend:
+    build: ./rest
+    ports:
+     - "8080:8080"
