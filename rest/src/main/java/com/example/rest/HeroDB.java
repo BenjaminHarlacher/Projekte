@@ -1,8 +1,10 @@
 package com.example.rest;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 public class HeroDB {
+    @CrossOrigin
     @GetMapping("/heroname")
     public Hero[] getHeroes()
     {
