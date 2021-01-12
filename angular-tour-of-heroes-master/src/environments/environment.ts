@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendApiURL: 'http://localhost:8080/heroname'
+  backendApiURL: 'http://localhost:8080/heronames'
 };
 providers:[
   {}

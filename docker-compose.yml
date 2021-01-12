@@ -3,6 +3,8 @@ version: '3'
 
 services:
   frontend: 
+    environment: 
+      - "backendApiURL='http://localhost:8080/heronames'"
     build:  ./angular-tour-of-heroes-master
     ports:
      - "8000:80"

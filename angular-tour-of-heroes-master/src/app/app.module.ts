@@ -49,3 +49,6 @@ import { from } from 'rxjs';
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+export const environment = {
+  
+}
