@@ -20,6 +20,7 @@ import {MatCardModule} from '@angular/material/card'
 import {MatListModule,} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { from } from 'rxjs';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { from } from 'rxjs';
     MatProgressSpinnerModule,
     MatListModule,
     MatCardModule,
+    AuthModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
