@@ -48,6 +48,7 @@ import { AuthModule } from './auth/auth.module';
     MessagesComponent,
     HeroSearchComponent
   ],
+  providers: [],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
