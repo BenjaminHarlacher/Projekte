@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   //heronames = [];
   //constructor(private dataService: DataService) { }
   constructor(private heroService: HeroService) { }
-
+  title = 'Tour of Heroes';
   ngOnInit() {
     this.getHeroes();
     /*this.dataService.sendGetRequest().subscribe((data: any[])=>{

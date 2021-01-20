@@ -1,13 +1,10 @@
 <body>
-    <nav>
-      <a routerLink="/login">Login</a>
-      <a routerLink="/register">Register</a>
-    <a routerLink="/reset-password">Reset Password</a>
-    </nav>
+    <!-- <nav>
+          <a routerLink="/reset-password">Reset Password</a>
+      </nav>-->
+    <form>
     <!--<router-outlet></router-outlet>-->
-    <div class="imgcontainer">
-       
-      </div>
+  
     
       <div class="container">
         <label for="uname"><b>Username</b></label>
@@ -17,9 +14,9 @@
         <input type="password" placeholder="Enter Password" name="psw" required>
     
         <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
+        <p>Need an Account? register <a routerLink="/register">here</a></p>
+       
       </div>
+    </form>
     
 </body>

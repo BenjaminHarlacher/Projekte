@@ -11,6 +11,7 @@ import { DataService } from '../data.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
+  title = 'Tour of Heroes';
   //heronames = [];
 
   //constructor(private dataService: DataService) { }
