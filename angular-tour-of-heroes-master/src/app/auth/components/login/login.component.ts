@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   }
   initForm(){
     this.formGroup = new FormGroup({
-      email: new FormControl('',[Validators.required]),
-      password: new FormControl('',[Validators.required])
+      email: new FormControl("",[Validators.required]),
+      password: new FormControl("",[Validators.required])
     })
   }
   loginProcess(){
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
         if(result.success){
           console.log(result);
           alert(result.message);
-          window.location.href = '/dashboard'
+          //window.location.href = '/dashboard';
         }
         else{
           alert(result.message)
