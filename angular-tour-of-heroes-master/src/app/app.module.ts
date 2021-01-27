@@ -14,7 +14,6 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {MatCardModule} from '@angular/material/card'
 import {MatListModule,} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';

@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
-  backendApiURL: 'http://localhost:8080/heronames'
+  backendApiURL: 'http://localhost:8080/heronames',
+
 };
+
+export const   baseURL ='http://localhost:4200/login' ;
 providers:[
   {}
 ]
