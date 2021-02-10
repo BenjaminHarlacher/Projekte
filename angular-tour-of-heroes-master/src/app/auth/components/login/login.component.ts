@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
         if(result.success){
           console.log(result);
           alert(result.message);
-          //window.location.href = '/dashboard';
+          window.location.href = '/dashboard';
         }
         else{
           alert(result.message);

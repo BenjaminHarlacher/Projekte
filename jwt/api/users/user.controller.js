@@ -120,7 +120,7 @@ module.exports = {
             if(result){
                 results.password = undefined;
                 const jsonwebtoken = sign({result: results}, "qwe1234", {
-                    expiresIn: "1h"
+                    expiresIn: "1min"
                 });
                 return res.json({
                     success: 1,
