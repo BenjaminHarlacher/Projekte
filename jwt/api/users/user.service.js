@@ -19,9 +19,9 @@ module.exports = {
             }
         );
     },
-    getusers: callBack =>{
+    getUsers: callBack =>{
         pool.query(
-            `select id,firstName,lastName,email from tbl_user`,
+            `select user_id,firstName,lastName,email from tbl_user`,
             [],
             (error, results, fields) =>{
                 if (error){
@@ -31,9 +31,9 @@ module.exports = {
             }
         );
     },
-    getuserByUserId:(id, callBack) =>{
+    getUserByUserId:(id, callBack) =>{
         pool.query(
-            `select id,firstName,lastName,email from tbl_user where id = ?`,
+            `select user_id,firstName,lastName,email from tbl_user where user_id = ?`,
             [id],
             (error, results, fields) =>{
                 if (error){
@@ -45,7 +45,7 @@ module.exports = {
     },
     updateUser:(data, callBack) =>{
         pool.query(
-            `update registration set firstName=?, lastName=?, email=?,password=? where id = ?`,
+            `update tbl_user set firstName=?, lastName=?, email=?,password=? where user_id = ?`,
             [
                 data.first_name,
                 data.last_name,
@@ -55,7 +55,31 @@ module.exports = {
             ],
             (error, results, fields) =>{
                 if (error){
+                    callBack(error);
+                }
+                return callBack(null, results);
+            }
+        );
+    },
+    deleteUser:(data, callBack) =>{
+        pool.query(
+            `delete from tbl_user where user_id = ?`,
+            [data.id],
+            (error, results, fields) =>{
+                if (error){
                    return callBack(error);
+                }
+                return callBack(null, results[0]);
+            }
+        );
+    },
+    getUserByUserEmail:(email, callBack) =>{
+        pool.query(
+            `select * from tbl_user where email = ?`,
+            [email],
+            (error, results, fields) =>{
+                if(error){
+                    callBack(error);
                 }
                 return callBack(null, results[0]);
             }

@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit {
   }
   initForm(){
     this.formGroup = new FormGroup({
-      email: new FormControl("",[Validators.required]),
-      password: new FormControl("",[Validators.required])
-    })
+      email: new FormControl('',[Validators.required]),
+      password: new FormControl('',[Validators.required])
+    });
   }
   loginProcess(){
     if(this.formGroup.valid){
@@ -28,9 +28,8 @@ export class LoginComponent implements OnInit {
           //window.location.href = '/dashboard';
         }
         else{
-          alert(result.message)
+          alert(result.message);
         }
-
       })
     }
   }
